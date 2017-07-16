@@ -1,0 +1,240 @@
+./BufferedFile.cc:89:int BufferedFile::onVprintf(const char* format, va_list va)
+./BufferedFile.cc:91:  return vfprintf(fp_, format, va);
+./ConsoleStatCalc.cc:319:    global::cout()->printf("\r%s\r", line.c_str());
+./version_usage.cc:87:  out->printf(_("Usage: aria2c [OPTIONS] [URI | MAGNET | TORRENT_FILE |"
+./version_usage.cc:89:  out->printf("\n");
+./version_usage.cc:92:    out->printf(_("See 'aria2c -h'."));
+./version_usage.cc:93:    out->printf("\n");
+./version_usage.cc:101:      out->printf(_("Printing all options."));
+./version_usage.cc:104:      out->printf(_("Printing options tagged with '%s'."), keyword.c_str());
+./version_usage.cc:105:      out->printf("\n");
+./version_usage.cc:106:      out->printf(_("See 'aria2c -h#help' to know all available tags."));
+./version_usage.cc:108:    out->printf("\n");
+./version_usage.cc:109:    out->printf(_("Options:"));
+./version_usage.cc:110:    out->printf("\n");
+./version_usage.cc:116:      out->printf("\n");
+./version_usage.cc:123:      out->printf(_("Printing options whose name includes '%s'."),
+./version_usage.cc:125:      out->printf("\n");
+./version_usage.cc:126:      out->printf(_("Options:"));
+./version_usage.cc:127:      out->printf("\n");
+./version_usage.cc:133:        out->printf("\n");
+./version_usage.cc:137:      out->printf(_("No option matching with '%s'."), keyword.c_str());
+./version_usage.cc:138:      out->printf("\n");
+./version_usage.cc:143:    out->printf("URI, MAGNET, TORRENT_FILE, METALINK_FILE:\n");
+./version_usage.cc:144:    out->printf(
+./version_usage.cc:148:    out->printf("\n");
+./version_usage.cc:149:    out->printf(_(" You can also specify arbitrary number of BitTorrent Magnet "
+./version_usage.cc:154:    out->printf("\n\n");
+./version_usage.cc:155:    out->printf(_(" You can specify both torrent file with -T option and URIs. "
+./version_usage.cc:166:    out->printf("\n\n");
+./version_usage.cc:167:    out->printf(_(" Make sure that URI is quoted with single(\') or double(\") "
+./version_usage.cc:171:    out->printf("\n\n");
+./version_usage.cc:172:    out->printf(
+./version_usage.cc:182:  out->printf(_("Refer to man page for more information."));
+./version_usage.cc:183:  out->printf("\n");
+./fmt.h:49:    __attribute__((format(printf, 1, 2)))
+./Context.cc:120:    printf(">>> ");
+./Context.cc:121:    printf(MSG_SHOW_FILES, (uri).c_str());
+./Context.cc:122:    printf("\n");
+./Context.cc:137:        printf("%s\n\n", MSG_NOT_TORRENT_METALINK);
+./Context.cc:141:      global::cout()->printf("%s\n", e.stackTrace().c_str());
+./Context.cc:305:    global::cout()->printf("%s\n", MSG_NO_FILES_TO_DOWNLOAD);
+./OutputFile.h:43:// include <string> just to cancel libintl's #define vprintf libintl_vprintf
+./OutputFile.h:53:  virtual int vprintf(const char* format, va_list va) = 0;
+./OutputFile.h:54:  inline int printf(const char* format, ...)
+./OutputFile.h:58:    int rv = vprintf(format, va);
+./GZipFile.cc:147:int GZipFile::onVprintf(const char* format, va_list va)
+./GZipFile.cc:152:    len = vsnprintf(buf_, buflen_, format, va);
+./Platform.cc:143:    global::cerr()->printf("ares_library_init() failed:%s\n",
+./AbstractDiskWriter.cc:99:    snprintf(buf, sizeof(buf), "File I/O error %x", errNum);
+./BufferedFile.h:58:  virtual int onVprintf(const char* format, va_list va) CXX11_OVERRIDE;
+./WinConsoleFile.cc:137:int WinConsoleFile::vprintf(const char* format, va_list va)
+./WinConsoleFile.cc:139:  ssize_t r = vsnprintf(NULL, 0, format, va);
+./WinConsoleFile.cc:144:  r = vsnprintf(buf.get(), r, format, va);
+./bittorrent_helper.h:341:    o.printf("Comment: %s\n", torrentAttrs->comment.c_str());
+./bittorrent_helper.h:344:    o.printf("Creation Date: %s\n",
+./bittorrent_helper.h:348:    o.printf("Created By: %s\n", torrentAttrs->createdBy.c_str());
+./bittorrent_helper.h:350:  o.printf("Mode: %s\n", getModeString(torrentAttrs->mode));
+./bittorrent_helper.h:357:      o.printf(" %s", elem.c_str());
+./bittorrent_helper.h:361:  o.printf("Info Hash: %s\n", util::toHex(torrentAttrs->infoHash).c_str());
+./bittorrent_helper.h:362:  o.printf("Piece Length: %sB\n",
+./bittorrent_helper.h:364:  o.printf("The Number of Pieces: %lu\n",
+./bittorrent_helper.h:366:  o.printf("Total Length: %sB (%s)\n",
+./bittorrent_helper.h:375:      o.printf(" %s\n", (*i).c_str());
+./bittorrent_helper.h:381:      o.printf(" %s:%u\n", p.first.c_str(), p.second);
+./bittorrent_helper.h:384:  o.printf("Name: %s\n", torrentAttrs->name.c_str());
+./bittorrent_helper.h:385:  o.printf("Magnet URI: %s\n", torrent2Magnet(torrentAttrs).c_str());
+./SHA1IOFile.h:59:  virtual int onVprintf(const char* format, va_list va) CXX11_OVERRIDE;
+./fmt.cc:49:  rv = vsnprintf(buf, sizeof(buf), fmtTemplate, ap);
+./fmt.cc:51:  // MINGW32 vsnprintf returns -1 if output is truncated.
+./IOFile.h:81:  int vprintf(const char* format, va_list va) CXX11_OVERRIDE;
+./IOFile.h:93:  virtual int onVprintf(const char* format, va_list va) = 0;
+./OptionHandler.cc:69:  out->printf("%s\n\n", optionHandler.getDescription());
+./OptionHandler.cc:72:    out->printf("%s%s\n", POSSIBLE_MSG, possibleValues.c_str());
+./OptionHandler.cc:75:    out->printf("%s%s\n", DEFAULT_MSG, optionHandler.getDefaultValue().c_str());
+./OptionHandler.cc:77:  out->printf("%s%s\n", TAGS_MSG, optionHandler.toTagString().c_str());
+./WinConsoleFile.h:52:  virtual int vprintf(const char* format, va_list va) CXX11_OVERRIDE;
+./SocketCore.cc:111:    snprintf(buf, sizeof(buf), EX_SOCKET_UNKNOWN_ERROR, errNum, errNum);
+./OptionHandlerFactory.cc:1840:    snprintf(prefix, sizeof(prefix), "A2-%d-%d-%d-", major, minor, micro);
+./Logger.cc:136:  fp.printf("%s.%06ld [%s] [%s:%d] ", datestr, tv.tv_usec, levelToString(level),
+./Logger.cc:175:    fp.printf("%s [%s%s\033[0m] ", datestr, levelColor(level),
+./Logger.cc:179:    fp.printf("%s [%s] ", datestr, levelToString(level));
+./Logger.cc:197:    fpp_->printf("%s\n", msg);
+./Logger.cc:202:    global::cout()->printf("\n");
+./Logger.cc:204:    global::cout()->printf("%s\n", msg);
+./alloca.c:448:    fprintf(stderr, "%011o %011o %011o\n", this_segment, address, stkl);
+./alloca.c:468:    fprintf(stderr, "%011o %011o\n", pseg, size);
+./getaddrinfo.c:296: * sprintf(s, "%d", n).
+./getaddrinfo.c:558:      sprintf(serv, "%d", ntohs(sa_in->sin_port));
+./NullOutputFile.h:47:  virtual int vprintf(const char* format, va_list va) CXX11_OVERRIDE
+./option_processing.cc:85:      global::cerr()->printf(
+./option_processing.cc:88:      global::cerr()->printf("\n%s\n", e.stackTrace().c_str());
+./option_processing.cc:163:  global::cerr()->printf("\n");
+./option_processing.cc:164:  global::cerr()->printf(_("Did you mean:"));
+./option_processing.cc:165:  global::cerr()->printf("\n");
+./option_processing.cc:168:    global::cerr()->printf("\t--%s\n", (*i).second->k);
+./option_processing.cc:239:          global::cerr()->printf(_("Parse error in %s"), cfname.c_str());
+./option_processing.cc:240:          global::cerr()->printf("\n%s", e.stackTrace().c_str());
+./option_processing.cc:243:            global::cerr()->printf(_("Usage:"));
+./option_processing.cc:244:            global::cerr()->printf("\n%s\n", h->getDescription());
+./option_processing.cc:249:          global::cerr()->printf(_("Parse error in %s"), cfname.c_str());
+./option_processing.cc:250:          global::cerr()->printf("\n%s", e.stackTrace().c_str());
+./option_processing.cc:255:        global::cerr()->printf(_("Configuration file %s is not found."),
+./option_processing.cc:257:        global::cerr()->printf("\n");
+./option_processing.cc:284:    global::cerr()->printf("%s", e.stackTrace().c_str());
+./option_processing.cc:287:      global::cerr()->printf(_("Usage:"));
+./option_processing.cc:288:      global::cerr()->printf("\n");
+./option_processing.cc:299:    global::cerr()->printf("%s", e.stackTrace().c_str());
+./option_processing.cc:315:      global::cerr()->printf(MSG_URI_REQUIRED);
+./option_processing.cc:316:      global::cerr()->printf("\n");
+./RequestGroupMan.cc:702:  o.printf("\n%s"
+./RequestGroupMan.cc:715:  o.printf("%s\n", line.c_str());
+./RequestGroupMan.cc:753:    o.printf("\n%s\n", _("Status Legend:"));
+./GZipFile.h:54:  virtual int onVprintf(const char* format, va_list va) CXX11_OVERRIDE;
+./remover.txt:1:./BufferedFile.cc:89:int BufferedFile::onVprintf(const char* format, va_list va)
+./remover.txt:2:./BufferedFile.cc:91:  return vfprintf(fp_, format, va);
+./remover.txt:3:./ConsoleStatCalc.cc:319:    global::cout()->printf("\r%s\r", line.c_str());
+./remover.txt:4:./version_usage.cc:87:  out->printf(_("Usage: aria2c [OPTIONS] [URI | MAGNET | TORRENT_FILE |"
+./remover.txt:5:./version_usage.cc:89:  out->printf("\n");
+./remover.txt:6:./version_usage.cc:92:    out->printf(_("See 'aria2c -h'."));
+./remover.txt:7:./version_usage.cc:93:    out->printf("\n");
+./remover.txt:8:./version_usage.cc:101:      out->printf(_("Printing all options."));
+./remover.txt:9:./version_usage.cc:104:      out->printf(_("Printing options tagged with '%s'."), keyword.c_str());
+./remover.txt:10:./version_usage.cc:105:      out->printf("\n");
+./remover.txt:11:./version_usage.cc:106:      out->printf(_("See 'aria2c -h#help' to know all available tags."));
+./remover.txt:12:./version_usage.cc:108:    out->printf("\n");
+./remover.txt:13:./version_usage.cc:109:    out->printf(_("Options:"));
+./remover.txt:14:./version_usage.cc:110:    out->printf("\n");
+./remover.txt:15:./version_usage.cc:116:      out->printf("\n");
+./remover.txt:16:./version_usage.cc:123:      out->printf(_("Printing options whose name includes '%s'."),
+./remover.txt:17:./version_usage.cc:125:      out->printf("\n");
+./remover.txt:18:./version_usage.cc:126:      out->printf(_("Options:"));
+./remover.txt:19:./version_usage.cc:127:      out->printf("\n");
+./remover.txt:20:./version_usage.cc:133:        out->printf("\n");
+./remover.txt:21:./version_usage.cc:137:      out->printf(_("No option matching with '%s'."), keyword.c_str());
+./remover.txt:22:./version_usage.cc:138:      out->printf("\n");
+./remover.txt:23:./version_usage.cc:143:    out->printf("URI, MAGNET, TORRENT_FILE, METALINK_FILE:\n");
+./remover.txt:24:./version_usage.cc:144:    out->printf(
+./remover.txt:25:./version_usage.cc:148:    out->printf("\n");
+./remover.txt:26:./version_usage.cc:149:    out->printf(_(" You can also specify arbitrary number of BitTorrent Magnet "
+./remover.txt:27:./version_usage.cc:154:    out->printf("\n\n");
+./remover.txt:28:./version_usage.cc:155:    out->printf(_(" You can specify both torrent file with -T option and URIs. "
+./remover.txt:29:./version_usage.cc:166:    out->printf("\n\n");
+./remover.txt:30:./version_usage.cc:167:    out->printf(_(" Make sure that URI is quoted with single(\') or double(\") "
+./remover.txt:31:./version_usage.cc:171:    out->printf("\n\n");
+./remover.txt:32:./version_usage.cc:172:    out->printf(
+./remover.txt:33:./version_usage.cc:182:  out->printf(_("Refer to man page for more information."));
+./remover.txt:34:./version_usage.cc:183:  out->printf("\n");
+./remover.txt:35:./fmt.h:49:    __attribute__((format(printf, 1, 2)))
+./remover.txt:36:./Context.cc:120:    printf(">>> ");
+./remover.txt:37:./Context.cc:121:    printf(MSG_SHOW_FILES, (uri).c_str());
+./remover.txt:38:./Context.cc:122:    printf("\n");
+./remover.txt:39:./Context.cc:137:        printf("%s\n\n", MSG_NOT_TORRENT_METALINK);
+./remover.txt:40:./Context.cc:141:      global::cout()->printf("%s\n", e.stackTrace().c_str());
+./remover.txt:41:./Context.cc:305:    global::cout()->printf("%s\n", MSG_NO_FILES_TO_DOWNLOAD);
+./remover.txt:42:./OutputFile.h:43:// include <string> just to cancel libintl's #define vprintf libintl_vprintf
+./remover.txt:43:./OutputFile.h:53:  virtual int vprintf(const char* format, va_list va) = 0;
+./remover.txt:44:./OutputFile.h:54:  inline int printf(const char* format, ...)
+./remover.txt:45:./OutputFile.h:58:    int rv = vprintf(format, va);
+./remover.txt:46:./GZipFile.cc:147:int GZipFile::onVprintf(const char* format, va_list va)
+./remover.txt:47:./GZipFile.cc:152:    len = vsnprintf(buf_, buflen_, format, va);
+./remover.txt:48:./Platform.cc:143:    global::cerr()->printf("ares_library_init() failed:%s\n",
+./remover.txt:49:./AbstractDiskWriter.cc:99:    snprintf(buf, sizeof(buf), "File I/O error %x", errNum);
+./remover.txt:50:./BufferedFile.h:58:  virtual int onVprintf(const char* format, va_list va) CXX11_OVERRIDE;
+./remover.txt:51:./WinConsoleFile.cc:137:int WinConsoleFile::vprintf(const char* format, va_list va)
+./remover.txt:52:./WinConsoleFile.cc:139:  ssize_t r = vsnprintf(NULL, 0, format, va);
+./remover.txt:53:./WinConsoleFile.cc:144:  r = vsnprintf(buf.get(), r, format, va);
+./remover.txt:54:./bittorrent_helper.h:341:    o.printf("Comment: %s\n", torrentAttrs->comment.c_str());
+./remover.txt:55:./bittorrent_helper.h:344:    o.printf("Creation Date: %s\n",
+./remover.txt:56:./bittorrent_helper.h:348:    o.printf("Created By: %s\n", torrentAttrs->createdBy.c_str());
+./remover.txt:57:./bittorrent_helper.h:350:  o.printf("Mode: %s\n", getModeString(torrentAttrs->mode));
+./remover.txt:58:./bittorrent_helper.h:357:      o.printf(" %s", elem.c_str());
+./remover.txt:59:./bittorrent_helper.h:361:  o.printf("Info Hash: %s\n", util::toHex(torrentAttrs->infoHash).c_str());
+./remover.txt:60:./bittorrent_helper.h:362:  o.printf("Piece Length: %sB\n",
+./remover.txt:61:./bittorrent_helper.h:364:  o.printf("The Number of Pieces: %lu\n",
+./remover.txt:62:./bittorrent_helper.h:366:  o.printf("Total Length: %sB (%s)\n",
+./remover.txt:63:./bittorrent_helper.h:375:      o.printf(" %s\n", (*i).c_str());
+./remover.txt:64:./bittorrent_helper.h:381:      o.printf(" %s:%u\n", p.first.c_str(), p.second);
+./remover.txt:65:./bittorrent_helper.h:384:  o.printf("Name: %s\n", torrentAttrs->name.c_str());
+./remover.txt:66:./bittorrent_helper.h:385:  o.printf("Magnet URI: %s\n", torrent2Magnet(torrentAttrs).c_str());
+./remover.txt:67:./SHA1IOFile.h:59:  virtual int onVprintf(const char* format, va_list va) CXX11_OVERRIDE;
+./remover.txt:68:./fmt.cc:49:  rv = vsnprintf(buf, sizeof(buf), fmtTemplate, ap);
+./remover.txt:69:./fmt.cc:51:  // MINGW32 vsnprintf returns -1 if output is truncated.
+./remover.txt:70:./IOFile.h:81:  int vprintf(const char* format, va_list va) CXX11_OVERRIDE;
+./remover.txt:71:./IOFile.h:93:  virtual int onVprintf(const char* format, va_list va) = 0;
+./remover.txt:72:./OptionHandler.cc:69:  out->printf("%s\n\n", optionHandler.getDescription());
+./remover.txt:73:./OptionHandler.cc:72:    out->printf("%s%s\n", POSSIBLE_MSG, possibleValues.c_str());
+./remover.txt:74:./OptionHandler.cc:75:    out->printf("%s%s\n", DEFAULT_MSG, optionHandler.getDefaultValue().c_str());
+./remover.txt:75:./OptionHandler.cc:77:  out->printf("%s%s\n", TAGS_MSG, optionHandler.toTagString().c_str());
+./remover.txt:76:./WinConsoleFile.h:52:  virtual int vprintf(const char* format, va_list va) CXX11_OVERRIDE;
+./remover.txt:77:./SocketCore.cc:111:    snprintf(buf, sizeof(buf), EX_SOCKET_UNKNOWN_ERROR, errNum, errNum);
+./remover.txt:78:./OptionHandlerFactory.cc:1840:    snprintf(prefix, sizeof(prefix), "A2-%d-%d-%d-", major, minor, micro);
+./remover.txt:79:./Logger.cc:136:  fp.printf("%s.%06ld [%s] [%s:%d] ", datestr, tv.tv_usec, levelToString(level),
+./remover.txt:80:./Logger.cc:175:    fp.printf("%s [%s%s\033[0m] ", datestr, levelColor(level),
+./remover.txt:81:./Logger.cc:179:    fp.printf("%s [%s] ", datestr, levelToString(level));
+./remover.txt:82:./Logger.cc:197:    fpp_->printf("%s\n", msg);
+./remover.txt:83:./Logger.cc:202:    global::cout()->printf("\n");
+./remover.txt:84:./Logger.cc:204:    global::cout()->printf("%s\n", msg);
+./remover.txt:85:./alloca.c:448:    fprintf(stderr, "%011o %011o %011o\n", this_segment, address, stkl);
+./remover.txt:86:./alloca.c:468:    fprintf(stderr, "%011o %011o\n", pseg, size);
+./remover.txt:87:./getaddrinfo.c:296: * sprintf(s, "%d", n).
+./remover.txt:88:./getaddrinfo.c:558:      sprintf(serv, "%d", ntohs(sa_in->sin_port));
+./remover.txt:89:./NullOutputFile.h:47:  virtual int vprintf(const char* format, va_list va) CXX11_OVERRIDE
+./remover.txt:90:./option_processing.cc:85:      global::cerr()->printf(
+./remover.txt:91:./option_processing.cc:88:      global::cerr()->printf("\n%s\n", e.stackTrace().c_str());
+./remover.txt:92:./option_processing.cc:163:  global::cerr()->printf("\n");
+./remover.txt:93:./option_processing.cc:164:  global::cerr()->printf(_("Did you mean:"));
+./remover.txt:94:./option_processing.cc:165:  global::cerr()->printf("\n");
+./remover.txt:95:./option_processing.cc:168:    global::cerr()->printf("\t--%s\n", (*i).second->k);
+./remover.txt:96:./option_processing.cc:239:          global::cerr()->printf(_("Parse error in %s"), cfname.c_str());
+./remover.txt:97:./option_processing.cc:240:          global::cerr()->printf("\n%s", e.stackTrace().c_str());
+./remover.txt:98:./option_processing.cc:243:            global::cerr()->printf(_("Usage:"));
+./remover.txt:99:./option_processing.cc:244:            global::cerr()->printf("\n%s\n", h->getDescription());
+./remover.txt:100:./option_processing.cc:249:          global::cerr()->printf(_("Parse error in %s"), cfname.c_str());
+./remover.txt:101:./option_processing.cc:250:          global::cerr()->printf("\n%s", e.stackTrace().c_str());
+./remover.txt:102:./option_processing.cc:255:        global::cerr()->printf(_("Configuration file %s is not found."),
+./remover.txt:103:./option_processing.cc:257:        global::cerr()->printf("\n");
+./remover.txt:104:./option_processing.cc:284:    global::cerr()->printf("%s", e.stackTrace().c_str());
+./remover.txt:105:./option_processing.cc:287:      global::cerr()->printf(_("Usage:"));
+./remover.txt:106:./option_processing.cc:288:      global::cerr()->printf("\n");
+./remover.txt:107:./option_processing.cc:299:    global::cerr()->printf("%s", e.stackTrace().c_str());
+./remover.txt:108:./option_processing.cc:315:      global::cerr()->printf(MSG_URI_REQUIRED);
+./remover.txt:109:./option_processing.cc:316:      global::cerr()->printf("\n");
+./remover.txt:110:./RequestGroupMan.cc:702:  o.printf("\n%s"
+./remover.txt:111:./RequestGroupMan.cc:715:  o.printf("%s\n", line.c_str());
+./remover.txt:112:./RequestGroupMan.cc:753:    o.printf("\n%s\n", _("Status Legend:"));
+./remover.txt:113:./GZipFile.h:54:  virtual int onVprintf(const char* format, va_list va) CXX11_OVERRIDE;
+./remover.txt:114:./util.h:369:  os.printf("%s\n"
+./remover.txt:115:./util.h:376:    os.printf("%3d|%s\n"
+./remover.txt:116:./SHA1IOFile.cc:64:int SHA1IOFile::onVprintf(const char* format, va_list va)
+./remover.txt:117:./MultiUrlRequestInfo.cc:169:    global::cout()->printf(
+./remover.txt:118:./main.cc:94:    aria2::global::cerr()->printf("%s\n%s\n", EX_EXCEPTION_CAUGHT,
+./remover.txt:119:./IOFile.cc:121:int IOFile::vprintf(const char* format, va_list va)
+./remover.txt:120:./IOFile.cc:123:  return onVprintf(format, va);
+./util.h:369:  os.printf("%s\n"
+./util.h:376:    os.printf("%3d|%s\n"
+./SHA1IOFile.cc:64:int SHA1IOFile::onVprintf(const char* format, va_list va)
+./MultiUrlRequestInfo.cc:169:    global::cout()->printf(
+./main.cc:94:    aria2::global::cerr()->printf("%s\n%s\n", EX_EXCEPTION_CAUGHT,
+./IOFile.cc:121:int IOFile::vprintf(const char* format, va_list va)
+./IOFile.cc:123:  return onVprintf(format, va);
